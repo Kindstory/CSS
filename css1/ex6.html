@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/ex6 p274</title>
+<style type="text/css">
+#header{
+	width: 1200px; height: 120px;
+	background-color: yellow;
+}
+#sidebar{
+	width: 300px; height: 600px;
+  	background-color: skyblue; 
+/* 	왼쪽 기준으로 어울림 */
+	float: left;
+}
+#content{
+	width: 900px; height: 600px;
+ 	background-color: pink; 
+/* 	왼쪽 기준으로 어울림 */
+	float: left;
+}
+#footer{
+	width: 1200px; height: 100px;
+	background-color: purple;
+/* 	어울림 해제 */
+	clear: left;
+}
+#container{
+/* 	너비 1200px, 밖여백 - 위아래 20px, 가운데정렬 */
+	width: 1200px;
+	margin: 20px auto;
+}
+</style>
+</head>
+<body>
+<div id="container">
+
+<div id="header">헤더</div>
+<div id="sidebar">사이드 바</div>
+<div id="content">본문</div>
+<div id="footer">푸터</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test7.html</title>
+<style type="text/css">
+/* 트랜지션 : 스타일을 완전히 다른 스타일로 변경 */
+#box{
+width: 100px; height: 100px;
+background-color: blue; border: 1px solid #222;
+/* 대상 너비 높이 */
+transition-property:width, height;
+/* 시간 2초 1초 */
+transition-duration:2s, 1s
+}
+#box:hover{
+	width: 200px; height: 120px;
+}
+#ex div{
+	width: 100px; height: 50px; margin: 5px 10px;
+	padding: 5px; color: white; background-color: blue;
+	border-radius: 5px;text-align: center;
+	font-weight: bold; float: left;
+}
+#ex:hover div{
+	height: 400px;
+}
+#ex .ease{
+/* 	transition : property, duration, function, delay */
+	transition: 3s ease;
+}
+#ex .linear{
+/* 	transition : property, duration, function, delay */
+	transition: 3s linear;
+}
+#ex .ease-in{
+/* 	transition : property, duration, function, delay */
+	transition: 3s ease-in;
+}
+#ex .ease-out{
+/* 	transition : property, duration, function, delay */
+	transition: 3s ease-out;
+}
+#ex .ease-in-out{
+/* 	transition : property, duration, function, delay */
+	transition: 3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div id="ex">
+	<div class="ease">ease</div>
+	<div class="linear">linear</div>
+	<div class="ease-in">ease-in</div>
+	<div class="ease-out">ease-out</div>
+	<div class="ease-in-out">ease-in-out</div>
+</div>
+<!-- <div id="box"></div> -->
+</body>
+</html>

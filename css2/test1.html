@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test1.html</title>
+<style type="text/css">
+/* 기본 선택자 : * 전체, 태그, id=이름 #이름, class=이름 .이름,  */
+/*         th 태그,td 태그 동등선택 */
+/* CSS 고급선택자 */
+/* 1. 연결선택자 */
+/* 2. 속성선택자 */
+/* 3. 가상클래스 , 가상요소 */
+
+/* 1.연결선택자(조합선택자) : 둘 이상의 선택자를 연결 */
+/* 하위요소 적용 하위선택자(자손선택자) */
+/* 상위요소 하위요소 */
+/* div p        =>  div  div  div p  /p  /div /div /div */
+
+/* 하위요소 적용  자식선택자 */
+/* 상위요소 > 하위요소 */  
+/* div > p   =>  div  p div  div p /p  /div /div  /p /div */
+
+/* section 안에 있는 모든 p태그 하위선택자(자손선택자) */
+section p{
+	color: blue;
+}
+/* section 안에 있는 모든 p태그 자식선택자 */
+section > p{
+	color: red;
+}
+
+/* 형제 요소에 스타일 적용 인접 형제 선택자*/
+/* 상위요소 + 하위요소 */
+/* h1 p태그 첫번째 형제 => 배경색 pink */
+h1+p{
+/* 	background-color: pink; */
+}
+/* 형제 요소에 스타일 적용 모든 형제 선택자 */
+/* 상위요소 ~ 하위요소 */
+/* h1 p태그 모든 형제 => 배경색 skyblue */
+h1~p{
+	background-color: skyblue;
+}
+</style>
+</head>
+<body>
+<section>
+	<h1>예약 방법 & 사용 요금</h1>
+	<p>온라인 예약 신청이...</p>
+	<p>계좌 입금...</p>
+	<div>
+		<p>가족실</p>
+		<p>도미토리</p>
+	</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test3.html</title>
+<style type="text/css">
+/* 3. 가상클래스 , 가상요소 => 사용자 동작에 반응 
+ 태그:link 하이퍼링크,  태그:visited 방문 , 태그:active 클릭했을때
+ 태그:hover 마우스를 태그위에 놓았을때  태그:focus */
+.container{
+	width: 960px; margin: 0px auto;
+}
+.navi{
+	width: 960px; height: 60px; padding-bottom: 10px;
+	border-bottom: 2px solid #ccc;
+}
+.navi ul{
+/* 	스타일 없앰, 안 아래 여백 5, 안 위 여백 10 */
+	list-style-type: none; padding-bottom: 5px;
+	 padding-top: 10px;
+}
+.navi ul li{
+/*  	어울림 왼쪽, 너비 150, 안여백 10 */
+	float: left; width: 150px; padding: 10px;
+}
+.navi a:link, .navi a:visited {
+/* 	배치 block , 글자크기 14, 글자색 검정색, 안여백 10, 밑줄없앰, 
+글자 가운데 정렬 */
+ display: block;  
+font-size: 14px; color: black; padding: 10px;
+text-decoration: none; text-align: center;
+}
+.navi a:hover, .navi a:focus {
+/* 	배경색 #222, 글자색 흰색 */
+	background-color: #222; color: white;
+}
+.navi a:active {
+/* 	배경색 빨간색 */
+	background-color: red;
+}
+/* 문서내 이동에서 대상 스타일 적용 :target */
+#intro:target {
+	background-color: orange;
+	color: red;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<nav class="navi">
+		<ul> 
+			<li><a href="#intro">이용 안내</a></li>
+			<li><a href="#">객실 소개</a></li>
+			<li><a href="#">예약 방법 및 요금</a></li>
+			<li><a href="#">예약하기</a></li>
+		</ul>
+	</nav>
+</div>
+<div id="intro">
+<h1>이용안내</h1>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test2.html</title>
+<style type="text/css">
+/* 2. 속성선택자 : 태그 속성 선택 => 태그[속성] */
+li{
+	list-style-type: none;
+	width: 120px;
+	display: inline-block;
+	margin: 10px;
+}
+a{
+	text-decoration: none;
+	padding: 5px 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+a[href]{
+	background-color: yellow;
+	border: 1px solid #ccc;
+}
+/* 2. 속성선택자 : 태그 속성 선택 => 태그[속성=속성값] */
+a[target=_blank]{
+	background-color:white;
+	background-image: url("../css1/dot.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+/* 2. 속성선택자 : 태그 속성 선택 => 태그[속성~=속성값] 포함하는 속성*/
+a[class~=button]{
+	border-radius: 5px;
+	box-shadow: 4px 4px;
+}
+/* 2. 속성선택자 : 태그 속성 선택 => 태그[속성|=속성값] 단어 안에 글자 포함하는 속성*/
+a[title|=us]{
+	color: red;
+}
+/* 2. 속성선택자 : 태그 속성 선택 => 태그[속성^=속성값] 시작하는 속성*/
+a[class^=b]{
+	color: green;
+}
+/* 2. 속성선택자 : 태그 속성 선택 => 태그[속성$=속성값] 끝나는 속성*/
+a[class$=on]{
+	background-color: pink;
+}
+/* 2. 속성선택자 : 태그 속성 선택 => 태그[속성*=속성값] 포함하는 속성*/
+a[class*=at]{
+	text-decoration: overline;
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><a>메인 메뉴 :</a></li>
+	<li><a href="ex1.html" target="_blank">메뉴1 :</a></li>
+	<li><a href="#" title="us-english">메뉴2 :</a></li>
+	<li><a href="#" class="button">메뉴3 :</a></li>
+	<li><a href="#" class="flat button">메뉴4 :</a></li>
+</ul>
+</body>
+</html>
